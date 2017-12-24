@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ajar.huzefa.olaplay.fragments.SongsFragment">
+
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/eight"
+        android:layout_marginTop="@dimen/four"
+        android:background="#fff"
+        android:fontFamily="sans-serif"
+        android:hint="@string/type_to_search"
+        android:padding="@dimen/sixteen"
+        android:textSize="@dimen/text_size_song_title"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/editTextSearch"
+        android:clipToPadding="false" />
+
+</RelativeLayout>

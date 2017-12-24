@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/eight"
+    android:paddingTop="@dimen/eight">
+
+    <ImageView
+        android:id="@+id/extraImageView"
+        android:layout_width="@dimen/anchorHeight"
+        android:layout_height="@dimen/anchorHeight"
+        android:padding="@dimen/eighteen"
+        android:src="@drawable/play" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_view_title_height"
+        android:layout_below="@+id/textViewActivity"
+        android:layout_toEndOf="@id/extraImageView"
+        android:gravity="top"
+        android:text="Dec 25, 2017 15:35:00"
+        android:textSize="@dimen/text_size_artist_name" />
+
+    <TextView
+        android:id="@+id/textViewActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_view_title_height"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/extraImageView"
+        android:maxLines="1"
+        android:text="Love The Way You Lie by Eminem"
+        android:textSize="@dimen/text_size_song_title" />
+
+</RelativeLayout>

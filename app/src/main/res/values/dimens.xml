@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="seriously_small">1dp</dimen>
+    <dimen name="just_a_little_bit">2dp</dimen>
+
+
+    <dimen name="four">4dp</dimen>
+    <dimen name="eight">8dp</dimen>
+    <dimen name="fifteen">15dp</dimen>
+    <dimen name="sixteen">16dp</dimen>
+    <dimen name="twentyThree">23dp</dimen>
+    <dimen name="fortyTwo">42dp</dimen>
+
+    <dimen name="downloadButtonSize">30dp</dimen>
+    <dimen name="anchorHeight">64dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="text_size_song_title">18sp</dimen>
+    <dimen name="text_size_activity">16sp</dimen>
+    <dimen name="text_size_artist_name">15sp</dimen>
+    <dimen name="text_view_artist_height">32dp</dimen>
+    <dimen name="text_view_title_height">32dp</dimen>
+    <dimen name="image_view_art_small">64dp</dimen>
+
+    <dimen name="eighteen">18dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="thirty">30dp</dimen>
+</resources>

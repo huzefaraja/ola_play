@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ajar.huzefa.olaplay.activities.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/playerBottomBar">
+
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/titleStrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/eight"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+    </android.support.v4.view.ViewPager>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/playerBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:transitionName="card"
+        app:cardElevation="@dimen/eight">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+
+            android:transitionName="container">
+
+            <RelativeLayout
+                android:id="@+id/songTitleArtistArt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/eight"
+                android:layout_toStartOf="@+id/buttonPlayPause"
+
+                >
+
+                <ImageView
+                    android:id="@+id/imageViewArt"
+                    android:layout_width="@dimen/image_view_art_small"
+                    android:layout_height="@dimen/image_view_art_small"
+                    android:layout_marginEnd="@dimen/sixteen"
+                    android:layout_marginStart="@dimen/eight"
+                    android:contentDescription="@string/album_artwork"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/artwork_placeholder" />
+
+
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    style="@style/textViewTitleStyle"
+                    android:layout_toEndOf="@+id/imageViewArt"
+                    android:gravity="center_vertical"
+                    android:text="@string/no_song_loaded"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/textViewArtist"
+                    style="@style/textViewArtistStyle"
+                    android:layout_below="@+id/textViewTitle"
+                    android:layout_toEndOf="@+id/imageViewArt"
+                    android:text="@string/no_song_loaded"
+                    android:textColor="#eee"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/buttonPlayPause"
+                android:layout_width="@dimen/anchorHeight"
+                android:layout_height="@dimen/anchorHeight"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/eight"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/play_pause_button"
+                android:elevation="@dimen/eight"
+                android:padding="@dimen/sixteen"
+
+                android:scaleType="centerInside"
+
+                android:src="@drawable/play"
+                android:tint="#fff" />
+
+            <ImageButton
+                android:id="@+id/buttonPrevious"
+                style="@style/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/play_pause_button"
+                android:src="@drawable/previous" />
+
+            <ImageButton
+                android:id="@+id/buttonRewind"
+                style="@style/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/buttonPrevious"
+
+                android:contentDescription="@string/play_pause_button"
+                android:src="@drawable/rewind" />
+
+
+            <ImageButton
+                android:id="@+id/buttonForward"
+                style="@style/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_alignParentEnd="true"
+
+                android:background="#0000"
+                android:contentDescription="@string/play_pause_button"
+                android:src="@drawable/forward" />
+
+            <ImageButton
+                android:id="@+id/buttonNext"
+                style="@style/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_alignParentEnd="true"
+
+                android:contentDescription="@string/play_pause_button"
+                android:src="@drawable/next" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/progressBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#afff"
+        android:elevation="@dimen/eight"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="@dimen/fortyTwo"
+            android:layout_height="@dimen/fortyTwo"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+    </FrameLayout>
+
+</RelativeLayout>
